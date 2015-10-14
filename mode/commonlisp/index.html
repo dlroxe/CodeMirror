@@ -110,6 +110,11 @@
 (integer-writer 2)
 (integer-writer 4)
 
+(defun write-double-quote-symbol (socket)
+  "Write a double quote symbol to a stream."
+  (declare (type stream socket))
+  (format socket "~A" #\"))
+
 (defun write-bytes (socket bytes)
   "Write a byte-array to a stream."
   (declare (type stream socket)
